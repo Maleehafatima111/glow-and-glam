@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glow &amp; Glam — Skincare &amp; Fashion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+  .hero-art,
+  .bridal-art { overflow:hidden; position:relative; }
+  .hero-art > .hero-image,
+  .bridal-art > .bridal-image {
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+  }
+  .hero-art::after,
+  .bridal-art::after {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,rgba(42,36,32,.04),rgba(42,36,32,.30));
+    pointer-events:none;
+  }
+  .hero-art .gg-water,
+  .hero-art .float-card,
+  .bridal-art > div:last-child { z-index:2; }
+  .g-item,
+  .fash-card,
+  .team-photo { overflow:hidden; position:relative; }
+  .g-item .photo,
+  .fash-card .photo,
+  .team-photo .photo {
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .6s ease;
+  }
+  .g-item:hover .photo,
+  .fash-card:hover .photo,
+  .team-card:hover .photo { transform:scale(1.06); }
+  .g-item .g-label { z-index:2; }
+  .fash-card > .photo { height:260px; }
+  .team-photo .photo { position:absolute; inset:0; }
+  .testi-avatar {
+    overflow:hidden;
+    background:none !important;
+  }
+  .testi-avatar img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .photo-overlay {
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,transparent 45%,rgba(20,15,12,.48));
+    pointer-events:none;
+  }
+</style>
+
+</head>
+<body>
+
+<header>
+  <div class="wrap navrow">
+    <a href="#home" class="logo">
+      <span class="monogram">GG</span>
+      <span class="logo-text"><span class="n">Glow &amp; Glam</span><br><span class="t">SKINCARE &amp; FASHION</span></span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#bridal">Bridal</a></li>
+        <li><a href="#fashion">Fashion</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <a href="#booking" class="btn btn-dark">Book Now</a>
+      <button class="hamb" id="hamb" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#bridal">Bridal</a>
+  <a href="#fashion">Fashion</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+  <a href="#booking" class="btn btn-outline" style="width:fit-content;">Book Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home" style="padding-bottom:0;">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-monogram">Glow and Glam &nbsp;—&nbsp; BY MALEEHA FATIMA</div>
+        <h1 class="display" style="margin-top:18px;">Where beauty<br>meets <em>confidence.</em></h1>
+        <p class="lede" style="margin-top:26px;">Discover premium beauty, skincare, hair, nails, and fashion services designed to make you look and feel your absolute best.</p>
+        <div class="hero-ctas">
+          <a href="#booking" class="btn btn-dark">Book an Appointment</a>
+          <a href="#services" class="btn btn-outline">Explore Services</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img class="hero-image" src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1000&q=85" alt="Luxury beauty salon interior"><div class="photo-overlay"></div>
+        <div class="gg-water">GG</div>
+        <div class="float-card">
+          <div class="fc-t">4.9<span style="font-size:.9rem;">/5</span></div>
+          <div>from 1,200+ Glam Girls</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="marquee" style="margin-top:90px;">
+    <div class="marquee-track">
+      <span>Skincare</span><span>Hair</span><span>Nails</span><span>Makeup</span><span>Bridal</span><span>Fashion</span>
+      <span>Skincare</span><span>Hair</span><span>Nails</span><span>Makeup</span><span>Bridal</span><span>Fashion</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / INTRO -->
+<section id="about">
+  <div class="wrap">
+    <div class="bridal-grid">
+      <div>
+        <div class="eyebrow">The GG Philosophy</div>
+        <h2 class="h2" style="margin-top:14px;">A studio built<br>around your glow.</h2>
+        <p class="lede" style="margin-top:22px;">Glow &amp; Glam is a modern beauty and fashion studio for women who want more than a service — a considered ritual of skincare, styling, and self-care. Every treatment is tailored, every product is chosen with intention, and every visit ends the same way: you, at your most confident.</p>
+        <div style="display:flex; gap:48px; margin-top:40px;">
+          <div>
+            <div style="font-family:var(--serif); font-size:2.2rem; color:var(--gold);">12+</div>
+            <div style="font-size:.8rem; color:var(--espresso-soft);">Years of Craft</div>
+          </div>
+          <div>
+            <div style="font-family:var(--serif); font-size:2.2rem; color:var(--gold);">40+</div>
+            <div style="font-size:.8rem; color:var(--espresso-soft);">Signature Services</div>
+          </div>
+          <div>
+            <div style="font-family:var(--serif); font-size:2.2rem; color:var(--gold);">6k+</div>
+            <div style="font-size:.8rem; color:var(--espresso-soft);">Glam Girls Served</div>
+          </div>
+        </div>
+      </div>
+      <div class="bridal-art">
+        <img class="photo" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=85" alt="Luxury facial skincare treatment"><div class="photo-overlay"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="background:var(--white);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What We Offer</div>
+      <div class="rule"></div>
+      <h2 class="h2">A menu built for<br>every kind of glow.</h2>
+    </div>
+
+    <div class="tabs" id="tabs">
+      <button class="tab-btn active" data-tab="facial">Facial &amp; Skincare</button>
+      <button class="tab-btn" data-tab="hair">Hair</button>
+      <button class="tab-btn" data-tab="nails">Nails</button>
+      <button class="tab-btn" data-tab="waxing">Waxing &amp; Hair Removal</button>
+      <button class="tab-btn" data-tab="makeup">Makeup</button>
+      <button class="tab-btn" data-tab="beauty">Beauty</button>
+    </div>
+
+    <div class="tab-panel active" data-panel="facial">
+      <div class="svc-grid">
+        <div class="svc-card"><div class="svc-glyph">01</div><h4>Signature Facial</h4><p class="svc-desc">A restorative deep-cleanse and hydration ritual for everyday radiance.</p><div class="svc-foot"><span class="svc-price">$45</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">02</div><h4>Hydra Facial</h4><p class="svc-desc">Multi-step resurfacing and infusion for instantly plumper, dewy skin.</p><div class="svc-foot"><span class="svc-price">$75</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">03</div><h4>Deep Cleansing Facial</h4><p class="svc-desc">Targeted extraction and detox for congested, tired skin.</p><div class="svc-foot"><span class="svc-price">$50</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">04</div><h4>Brightening Facial</h4><p class="svc-desc">Vitamin-C led treatment to even tone and restore luminosity.</p><div class="svc-foot"><span class="svc-price">$65</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">05</div><h4>Anti-Aging Facial</h4><p class="svc-desc">Firming actives and gentle massage to soften fine lines.</p><div class="svc-foot"><span class="svc-price">$85</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">06</div><h4>Acne Treatment</h4><p class="svc-desc">Calming, clarifying protocol for breakout-prone skin.</p><div class="svc-foot"><span class="svc-price">$55</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">07</div><h4>Skin Polishing</h4><p class="svc-desc">Gentle exfoliation for smooth, even texture.</p><div class="svc-foot"><span class="svc-price">$40</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">08</div><h4>Skin Consultation</h4><p class="svc-desc">One-on-one assessment and a personalised skincare plan.</p><div class="svc-foot"><span class="svc-price">Free</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="hair">
+      <div class="svc-grid">
+        <div class="svc-card"><div class="svc-glyph">01</div><h4>Haircut &amp; Styling</h4><p class="svc-desc">Precision cut finished with a bespoke blow-dry style.</p><div class="svc-foot"><span class="svc-price">$35</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">02</div><h4>Hair Wash &amp; Blow Dry</h4><p class="svc-desc">A refreshing wash finished with a smooth, voluminous blow-out.</p><div class="svc-foot"><span class="svc-price">$25</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">03</div><h4>Hair Coloring</h4><p class="svc-desc">Full colour application in your chosen tone.</p><div class="svc-foot"><span class="svc-price">$90</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">04</div><h4>Highlights</h4><p class="svc-desc">Dimensional foil highlights for natural-looking depth.</p><div class="svc-foot"><span class="svc-price">$110</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">05</div><h4>Balayage</h4><p class="svc-desc">Freehand, sun-kissed colour melt.</p><div class="svc-foot"><span class="svc-price">$140</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">06</div><h4>Hair Spa</h4><p class="svc-desc">Deep-conditioning ritual to restore shine and softness.</p><div class="svc-foot"><span class="svc-price">$55</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">07</div><h4>Keratin Treatment</h4><p class="svc-desc">Smoothing therapy that tames frizz for months.</p><div class="svc-foot"><span class="svc-price">$180</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">08</div><h4>Hair Smoothening</h4><p class="svc-desc">Long-lasting straightening for sleek, manageable hair.</p><div class="svc-foot"><span class="svc-price">$160</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">09</div><h4>Bridal Hair Styling</h4><p class="svc-desc">Custom trial and wedding-day hairstyling.</p><div class="svc-foot"><span class="svc-price">$120</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="nails">
+      <div class="svc-grid">
+        <div class="svc-card"><div class="svc-glyph">01</div><h4>Manicure</h4><p class="svc-desc">Classic shape, buff, and polish.</p><div class="svc-foot"><span class="svc-price">$25</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">02</div><h4>Pedicure</h4><p class="svc-desc">Soak, exfoliate, and polish for happy feet.</p><div class="svc-foot"><span class="svc-price">$35</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">03</div><h4>Gel Nails</h4><p class="svc-desc">Chip-resistant, high-shine gel finish.</p><div class="svc-foot"><span class="svc-price">$40</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">04</div><h4>Acrylic Nails</h4><p class="svc-desc">Durable, sculpted extensions in your preferred length.</p><div class="svc-foot"><span class="svc-price">$50</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">05</div><h4>Nail Extensions</h4><p class="svc-desc">Length and structure with a natural finish.</p><div class="svc-foot"><span class="svc-price">$55</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">06</div><h4>Nail Art</h4><p class="svc-desc">Hand-painted detail, from minimal to statement.</p><div class="svc-foot"><span class="svc-price">$15+</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">07</div><h4>French Tips</h4><p class="svc-desc">The timeless clean-line classic.</p><div class="svc-foot"><span class="svc-price">$30</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">08</div><h4>Luxury Nail Treatment</h4><p class="svc-desc">Paraffin soak, massage, and premium finish.</p><div class="svc-foot"><span class="svc-price">$65</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="waxing">
+      <div class="svc-grid">
+        <div class="svc-card"><div class="svc-glyph">01</div><h4>Full Body Wax</h4><p class="svc-desc">Complete smooth-skin treatment, head to toe.</p><div class="svc-foot"><span class="svc-price">$85</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">02</div><h4>Arms Wax</h4><p class="svc-desc">Quick, thorough, smooth finish.</p><div class="svc-foot"><span class="svc-price">$20</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">03</div><h4>Legs Wax</h4><p class="svc-desc">Full or half leg options available.</p><div class="svc-foot"><span class="svc-price">$30</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">04</div><h4>Underarms Wax</h4><p class="svc-desc">Fast, gentle, and precise.</p><div class="svc-foot"><span class="svc-price">$12</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">05</div><h4>Face Wax</h4><p class="svc-desc">Fine, gentle shaping for delicate skin.</p><div class="svc-foot"><span class="svc-price">$15</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">06</div><h4>Bikini Wax</h4><p class="svc-desc">Discreet, professional, and precise.</p><div class="svc-foot"><span class="svc-price">$35</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">07</div><h4>Threading</h4><p class="svc-desc">Precision hair removal for clean lines.</p><div class="svc-foot"><span class="svc-price">$10</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">08</div><h4>Eyebrow Shaping</h4><p class="svc-desc">Custom shape to frame your features.</p><div class="svc-foot"><span class="svc-price">$14</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="makeup">
+      <div class="svc-grid">
+        <div class="svc-card"><div class="svc-glyph">01</div><h4>Party Makeup</h4><p class="svc-desc">Glam, long-wearing looks for a night out.</p><div class="svc-foot"><span class="svc-price">$70</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">02</div><h4>Bridal Makeup</h4><p class="svc-desc">Flawless, camera-ready look for your big day.</p><div class="svc-foot"><span class="svc-price">$160</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">03</div><h4>Engagement Makeup</h4><p class="svc-desc">Soft glam tailored to your ring-day styling.</p><div class="svc-foot"><span class="svc-price">$110</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">04</div><h4>Soft Glam</h4><p class="svc-desc">Natural-finish, everyday elegant makeup.</p><div class="svc-foot"><span class="svc-price">$60</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">05</div><h4>HD Makeup</h4><p class="svc-desc">Ultra-fine finish built for high definition.</p><div class="svc-foot"><span class="svc-price">$95</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">06</div><h4>Photoshoot Makeup</h4><p class="svc-desc">Editorial-ready looks built for the lens.</p><div class="svc-foot"><span class="svc-price">$85</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">07</div><h4>Eye Makeup</h4><p class="svc-desc">Statement eyes, from smoky to graphic liner.</p><div class="svc-foot"><span class="svc-price">$30</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="beauty">
+      <div class="svc-grid">
+        <div class="svc-card"><div class="svc-glyph">01</div><h4>Eyebrow Shaping</h4><p class="svc-desc">Custom shape to frame your features.</p><div class="svc-foot"><span class="svc-price">$14</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">02</div><h4>Eyelash Extensions</h4><p class="svc-desc">Classic or volume sets for lasting flutter.</p><div class="svc-foot"><span class="svc-price">$75</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">03</div><h4>Lash Lift</h4><p class="svc-desc">Natural curl and lift, no extensions needed.</p><div class="svc-foot"><span class="svc-price">$45</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">04</div><h4>Brow Lamination</h4><p class="svc-desc">Fuller, fluffed, perfectly set brows.</p><div class="svc-foot"><span class="svc-price">$40</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">05</div><h4>Threading</h4><p class="svc-desc">Precision hair removal for clean lines.</p><div class="svc-foot"><span class="svc-price">$10</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+        <div class="svc-card"><div class="svc-glyph">06</div><h4>Beauty Consultation</h4><p class="svc-desc">Personalised routine and treatment plan.</p><div class="svc-foot"><span class="svc-price">Free</span><a href="#booking" class="svc-book">BOOK</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNATURE -->
+<section class="signature">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Curated Packages</div>
+      <div class="rule"></div>
+      <h2 class="h2">The GG Signature<br>Experience.</h2>
+    </div>
+    <div class="sig-grid">
+      <div class="sig-card">
+        <span class="sig-num">01</span>
+        <div class="sig-orb" style="background:radial-gradient(circle,#EFDAD5,#B8896F);"></div>
+        <h3>GG Glow Facial</h3>
+        <p>A complete luxury facial experience focused on hydration, brightness, and healthy skin.</p>
+        <div class="sig-price">$95</div>
+      </div>
+      <div class="sig-card">
+        <span class="sig-num">02</span>
+        <div class="sig-orb" style="background:radial-gradient(circle,#D9C4AE,#2A2420);"></div>
+        <h3>GG Glam Makeover</h3>
+        <p>Complete makeup, hairstyling, and beauty finishing for the moments that matter.</p>
+        <div class="sig-price">$180</div>
+      </div>
+      <div class="sig-card">
+        <span class="sig-num">03</span>
+        <div class="sig-orb" style="background:radial-gradient(circle,#C9A876,#3A322C);"></div>
+        <h3>GG Hair Revival</h3>
+        <p>Hair spa, restorative treatment, and finishing style for renewed shine.</p>
+        <div class="sig-price">$140</div>
+      </div>
+      <div class="sig-card">
+        <span class="sig-num">04</span>
+        <div class="sig-orb" style="background:radial-gradient(circle,#E4C4BE,#B8896F);"></div>
+        <h3>GG Royal Package</h3>
+        <p>Facial, manicure, pedicure, waxing, hairstyling, and makeup — the full GG day.</p>
+        <div class="sig-price">$420</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" style="background:var(--white);">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow">Transformations</div>
+      <div class="rule"></div>
+      <h2 class="h2">The GG Gallery</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item g1"><img class="photo" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1000&q=85" alt="Hair Transformation"><div class="photo-overlay"></div><div class="g-label"><span>Hair Transformation</span></div></div>
+      <div class="g-item g2"><img class="photo" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=85" alt="Nail Design"><div class="photo-overlay"></div><div class="g-label"><span>Nail Design</span></div></div>
+      <div class="g-item g3"><img class="photo" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=85" alt="Bridal Look"><div class="photo-overlay"></div><div class="g-label"><span>Bridal Look</span></div></div>
+      <div class="g-item g4"><img class="photo" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=85" alt="Skincare Result"><div class="photo-overlay"></div><div class="g-label"><span>Skincare Result</span></div></div>
+      <div class="g-item g5"><img class="photo" src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1000&q=85" alt="Salon Interior"><div class="photo-overlay"></div><div class="g-label"><span>Salon Interior</span></div></div>
+      <div class="g-item g6"><img class="photo" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=85" alt="Makeup Look"><div class="photo-overlay"></div><div class="g-label"><span>Makeup Look</span></div></div>
+      <div class="g-item g7"><img class="photo" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85" alt="Fashion Styling"><div class="photo-overlay"></div><div class="g-label"><span>Fashion Styling</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BRIDAL -->
+<section class="bridal" id="bridal">
+  <div class="wrap">
+    <div class="bridal-grid">
+      <div>
+        <div class="eyebrow">Bridal Beauty</div>
+        <div class="rule"></div>
+        <h2 class="h2">Your big day.<br>Your best glow.</h2>
+        <p class="lede" style="margin-top:22px;">From flawless skin to elegant hair and breathtaking makeup, GG creates a complete bridal beauty experience for your most unforgettable moments.</p>
+        <ul class="bridal-checklist">
+          <li>Bridal Makeup</li>
+          <li>Bridal Hairstyling</li>
+          <li>Pre-Bridal Facial</li>
+          <li>Manicure &amp; Pedicure</li>
+          <li>Full Body Wax</li>
+          <li>Bridal Packages</li>
+        </ul>
+        <a href="#booking" class="btn btn-dark">Book Your Bridal Consultation</a>
+      </div>
+      <div class="bridal-art">
+        <img class="bridal-image" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=85" alt="Elegant bridal beauty look"><div class="photo-overlay"></div>
+        <div style="position:absolute; bottom:26px; left:26px; color:var(--ivory); font-family:var(--serif); font-style:italic; font-size:1.5rem;">GG Bride</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FASHION -->
+<section id="fashion" style="background:var(--white);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Skincare &amp; Fashion</div>
+      <div class="rule"></div>
+      <h2 class="h2">Glow. Glam. Style.</h2>
+    </div>
+    <div class="fashion-grid">
+      <div class="fash-card"><img class="photo" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85" alt="Party Wear"><div class="photo-overlay"></div><div class="fash-info"><h4>Party Wear</h4><p>Statement pieces for every celebration.</p></div></div>
+      <div class="fash-card"><img class="photo" src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=900&q=85" alt="Bridal Wear"><div class="photo-overlay"></div><div class="fash-info"><h4>Bridal Wear</h4><p>Timeless elegance for your wedding day.</p></div></div>
+      <div class="fash-card"><img class="photo" src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85" alt="Casual Looks"><div class="photo-overlay"></div><div class="fash-info"><h4>Casual Looks</h4><p>Effortless style for everyday glow.</p></div></div>
+      <div class="fash-card"><img class="photo" src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=85" alt="Luxury Accessories"><div class="photo-overlay"></div><div class="fash-info"><h4>Luxury Accessories</h4><p>The finishing touch to every look.</p></div></div>
+      <div class="fash-card"><img class="photo" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85" alt="Styling Consultation"><div class="photo-overlay"></div><div class="fash-info"><h4>Styling Consultation</h4><p>Personal styling built around you.</p></div></div>
+      <div class="fash-card"><img class="photo" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85" alt="Beauty + Fashion Packages"><div class="photo-overlay"></div><div class="fash-info"><h4>Beauty + Fashion Packages</h4><p>Complete looks, head to toe.</p></div></div>
+    </div>
+    <div style="text-align:center; margin-top:50px;">
+      <a href="#booking" class="btn btn-outline">Discover Your Style</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section style="background:var(--ivory-deep);">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow">Membership &amp; Packages</div>
+      <div class="rule"></div>
+      <h2 class="h2">Simple, honest pricing.</h2>
+    </div>
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Essential Glow</h3>
+        <p class="p-desc">For everyday beauty upkeep.</p>
+        <div class="price-tag">$45<span style="font-size:1rem;">/visit</span></div>
+        <ul class="price-list">
+          <li><span>Signature Facial</span><span>✓</span></li>
+          <li><span>Haircut &amp; Style</span><span>✓</span></li>
+          <li><span>Classic Manicure</span><span>✓</span></li>
+          <li><span>Brow Shaping</span><span>✓</span></li>
+        </ul>
+        <a href="#booking" class="btn btn-outline" style="width:100%; justify-content:center;">Book Now</a>
+      </div>
+      <div class="price-card featured">
+        <h3>Signature Glam</h3>
+        <p class="p-desc">For a complete salon transformation.</p>
+        <div class="price-tag">$180<span style="font-size:1rem;">/visit</span></div>
+        <ul class="price-list">
+          <li><span>Hydra Facial</span><span>✓</span></li>
+          <li><span>Balayage or Color</span><span>✓</span></li>
+          <li><span>Gel Manicure + Pedicure</span><span>✓</span></li>
+          <li><span>Soft Glam Makeup</span><span>✓</span></li>
+        </ul>
+        <a href="#booking" class="btn btn-ghost" style="width:100%; justify-content:center;">Book Now</a>
+      </div>
+      <div class="price-card">
+        <h3>Royal GG Experience</h3>
+        <p class="p-desc">For premium full-service beauty.</p>
+        <div class="price-tag">$420<span style="font-size:1rem;">/visit</span></div>
+        <ul class="price-list">
+          <li><span>Anti-Aging Facial</span><span>✓</span></li>
+          <li><span>Hair Spa + Styling</span><span>✓</span></li>
+          <li><span>Luxury Nail Treatment</span><span>✓</span></li>
+          <li><span>Full Body Wax + HD Makeup</span><span>✓</span></li>
+        </ul>
+        <a href="#booking" class="btn btn-outline" style="width:100%; justify-content:center;">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="background:var(--white);">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow">Reviews</div>
+      <div class="rule"></div>
+      <h2 class="h2">Loved by our Glam Girls.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote">"GG completely transformed my bridal look. The makeup, hair, and skincare experience were absolutely perfect."</p>
+        <div class="testi-who"><div class="testi-avatar"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=200&q=80" alt="Client portrait"></div><div><div class="testi-name">Amara S.</div><div class="testi-role">Bridal Package</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote">"My hair has never felt this healthy. The Hair Revival package is worth every minute."</p>
+        <div class="testi-who"><div class="testi-avatar" style="background:linear-gradient(150deg,#D9C4AE,#2A2420);"></div><div><div class="testi-name">Nadia R.</div><div class="testi-role">GG Hair Revival</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote">"Elegant space, genuinely lovely staff, and my skin has never looked better."</p>
+        <div class="testi-who"><div class="testi-avatar" style="background:linear-gradient(150deg,#E4C4BE,#C9A876);"></div><div><div class="testi-name">Farah K.</div><div class="testi-role">GG Glow Facial</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote">"Booked the Royal Package for my engagement — flawless from start to finish."</p>
+        <div class="testi-who"><div class="testi-avatar" style="background:linear-gradient(150deg,#F3ECE3,#B8896F);"></div><div><div class="testi-name">Zara M.</div><div class="testi-role">GG Royal Package</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote">"The nail art team is unbelievably talented. I get compliments every single time."</p>
+        <div class="testi-who"><div class="testi-avatar" style="background:linear-gradient(150deg,#C9A876,#3A322C);"></div><div><div class="testi-name">Hina T.</div><div class="testi-role">Luxury Nail Treatment</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="booking">
+  <div class="wrap">
+    <div class="book-grid">
+      <div>
+        <div class="eyebrow">Reserve Your Visit</div>
+        <div class="rule"></div>
+        <h2 class="h2">Book your appointment.</h2>
+        <p class="lede" style="margin-top:18px;">Tell us what you're dreaming of, and we'll take care of the rest.</p>
+        <ul class="book-side-list">
+          <li><span class="num">01</span><span>Choose your service and preferred stylist.</span></li>
+          <li><span class="num">02</span><span>Pick a date and time that suits you.</span></li>
+          <li><span class="num">03</span><span>We confirm within the hour, every time.</span></li>
+        </ul>
+      </div>
+      <div>
+        <form id="bookForm" class="form-grid" onsubmit="return false;">
+          <div class="field"><label>Full Name</label><input type="text" required placeholder="Your full name"></div>
+          <div class="field"><label>Phone Number</label><input type="tel" required placeholder="+92 300 0000000"></div>
+          <div class="field"><label>Email</label><input type="email" required placeholder="you@email.com"></div>
+          <div class="field">
+            <label>Select Service</label>
+            <select required>
+              <option value="">Choose a service</option>
+              <option>Signature Facial</option>
+              <option>Hair Coloring</option>
+              <option>Bridal Makeup</option>
+              <option>Gel Nails</option>
+              <option>GG Royal Package</option>
+            </select>
+          </div>
+          <div class="field"><label>Select Date</label><input type="date" required></div>
+          <div class="field"><label>Select Time</label><input type="time" required></div>
+          <div class="field full"><label>Special Request</label><textarea placeholder="Anything we should know before your visit?"></textarea></div>
+          <div class="field full">
+            <button type="button" id="confirmBtn" class="btn btn-dark" style="width:100%; justify-content:center;">Confirm Appointment</button>
+          </div>
+        </form>
+        <div class="confirm-box" id="confirmBox">
+          <div class="confirm-tick">GG</div>
+          <h3 style="font-size:1.6rem; margin-bottom:10px;">You're all booked in.</h3>
+          <p style="color:var(--espresso-soft); font-size:.92rem;">A confirmation has been sent to your email. We can't wait to welcome you to Glow &amp; Glam.</p>
+          <button class="btn btn-outline" style="margin-top:24px;" onclick="document.getElementById('confirmBox').classList.remove('show'); document.getElementById('bookForm').style.display='contents';">Book Another</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section style="background:var(--white);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Our Experts</div>
+      <div class="rule"></div>
+      <h2 class="h2">Meet the GG<br>beauty experts.</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-photo"><img class="photo" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=700&q=85" alt="Glow & Glam beauty expert"><div class="photo-overlay"></div><div class="team-social"><span class="tsoc">IG</span><span class="tsoc">FB</span></div></div>
+        <h4>Sana Malik</h4>
+        <div class="team-role">Makeup Artist</div>
+        <p class="team-bio">Bridal &amp; editorial makeup with 9 years behind the brush.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo"><img class="photo" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=700&q=85" alt="Glow & Glam beauty expert"><div class="photo-overlay"></div><div class="team-social"><span class="tsoc">IG</span><span class="tsoc">FB</span></div></div>
+        <h4>Areeba Khan</h4>
+        <div class="team-role">Hair Stylist</div>
+        <p class="team-bio">Color specialist known for seamless balayage.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo"><img class="photo" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=85" alt="Glow & Glam beauty expert"><div class="photo-overlay"></div><div class="team-social"><span class="tsoc">IG</span><span class="tsoc">FB</span></div></div>
+        <h4>Dr. Mahnoor Ali</h4>
+        <div class="team-role">Skin Specialist</div>
+        <p class="team-bio">Clinical-grade facials tailored to every skin type.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo"><img class="photo" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=700&q=85" alt="Glow & Glam beauty expert"><div class="photo-overlay"></div><div class="team-social"><span class="tsoc">IG</span><span class="tsoc">FB</span></div></div>
+        <h4>Rida Farooq</h4>
+        <div class="team-role">Nail Artist</div>
+        <p class="team-bio">Hand-painted nail art and precision extensions.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo"><img class="photo" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=85" alt="Glow & Glam beauty expert"><div class="photo-overlay"></div><div class="team-social"><span class="tsoc">IG</span><span class="tsoc">FB</span></div></div>
+        <h4>Laiba Iqbal</h4>
+        <div class="team-role">Beauty Consultant</div>
+        <p class="team-bio">Guides every guest to their perfect GG routine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="eyebrow">Visit Us</div>
+        <div class="rule"></div>
+        <h2 class="h2" style="color:var(--ivory);">Glow &amp; Glam</h2>
+        <p style="font-family:var(--serif); font-style:italic; color:var(--gold-line); margin-top:6px;">Skincare &amp; Fashion</p>
+        <ul class="contact-list">
+          <li><span class="cl-label">PHONE</span><span class="cl-val">+92 300 1234567</span></li>
+          <li><span class="cl-label">WHATSAPP</span><span class="cl-val">+92 300 1234567</span></li>
+          <li><span class="cl-label">EMAIL</span><span class="cl-val">hello@glowandglam.com</span></li>
+          <li><span class="cl-label">LOCATION</span><span class="cl-val">F-7 Markaz, Islamabad, Pakistan</span></li>
+          <li><span class="cl-label">HOURS</span><span class="cl-val">Mon – Sat, 10:00 AM – 8:00 PM<br>Sun, 12:00 PM – 7:00 PM</span></li>
+        </ul>
+      </div>
+      <div class="map-block"><div class="map-pin"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">
+          <span class="monogram" style="border-color:rgba(250,246,240,.4); color:var(--ivory);">GG</span>
+          <span class="logo-text"><span class="n" style="color:var(--ivory);">Glow &amp; Glam</span><br><span class="t">SKINCARE &amp; FASHION</span></span>
+        </div>
+        <p class="foot-tag">A modern beauty and fashion studio for women who want more than a service.</p>
+        <div class="foot-social">
+          <a class="fsoc" href="#">IG</a>
+          <a class="fsoc" href="#">FB</a>
+          <a class="fsoc" href="#">TT</a>
+          <a class="fsoc" href="#">WA</a>
+        </div>
+      </div>
+      <div>
+        <div class="foot-h">QUICK LINKS</div>
+        <ul class="foot-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">SERVICES</div>
+        <ul class="foot-list">
+          <li><a href="#services">Facial</a></li>
+          <li><a href="#services">Hair</a></li>
+          <li><a href="#services">Nails</a></li>
+          <li><a href="#services">Waxing</a></li>
+          <li><a href="#services">Makeup</a></li>
+          <li><a href="#bridal">Bridal</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">STAY IN THE GLOW</div>
+        <p style="font-size:.86rem; color:rgba(250,246,240,.55);">Subscribe for beauty tips, launches, and members-only offers.</p>
+        <div class="foot-news">
+          <input type="email" placeholder="Your email address">
+          <button type="button" onclick="this.previousElementSibling.value='';this.textContent='Subscribed ✓';setTimeout(()=>this.textContent='Subscribe',2200);">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Glow &amp; Glam. All Rights Reserved.</span>
+      <span>Designed with care in Islamabad.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
